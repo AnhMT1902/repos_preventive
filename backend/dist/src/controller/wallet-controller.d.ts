@@ -5,6 +5,7 @@ declare class WalletController {
     deleteWallet: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     uploadWallet: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     findWalletByName: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+    showWalletById: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
 }
 declare const _default: WalletController;
 export default _default;

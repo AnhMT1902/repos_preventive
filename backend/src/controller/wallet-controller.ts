@@ -17,6 +17,9 @@ class WalletController {
     findWalletByName = async (req: Request, res: Response) => {
         return await WalletService.findWalletByName(req, res)
     }
+    showWalletById = async (req: Request, res: Response) => {
+        return await WalletService.showWalletById(req, res)
+    }
 }
 
 export default new WalletController()

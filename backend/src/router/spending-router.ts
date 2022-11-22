@@ -5,4 +5,5 @@ export const spendingRouter = Router();
 
 spendingRouter.get('',spendingController.getAll);
 spendingRouter.post('/create',spendingController.addSpending);
-spendingRouter.delete('/delete/:id',spendingController.delete)
+spendingRouter.delete('/delete/:id',spendingController.deleteSpending);
+spendingRouter.put('/edit',spendingController.uploadSpending);

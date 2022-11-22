@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const wallet_1 = require("../model/wallet");
+const detail_1 = require("../model/detail");
 class WalletService {
     constructor() {
         this.getAllWallet = async (req, res) => {
@@ -51,6 +52,27 @@ class WalletService {
             }
             else
                 return false;
+        };
+        this.showWalletById = async (req, res) => {
+            let idWallet = req.params.id;
+            let wallet = await wallet_1.Wallet.findOne({ _id: idWallet });
+            wallet.money = +await this.calSurplus(req, res, idWallet);
+            console.log(wallet);
+            return res.status(201).json(wallet);
+        };
+        this.calSurplus = async (req, res, idWallet) => {
+            let revenue = 0;
+            let spend = 0;
+            let arrDetail = await detail_1.Detail.find({ idWallet: idWallet }).populate('Spending', "classify");
+            arrDetail.forEach((item) => {
+                if (item.Spending.classify === true) {
+                    revenue += item.money;
+                }
+                else {
+                    spend += item.money;
+                }
+            });
+            return revenue - spend;
         };
     }
 }

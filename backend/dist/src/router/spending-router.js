@@ -9,5 +9,6 @@ const spending_controller_1 = __importDefault(require("../controller/spending-co
 exports.spendingRouter = (0, express_1.Router)();
 exports.spendingRouter.get('', spending_controller_1.default.getAll);
 exports.spendingRouter.post('/create', spending_controller_1.default.addSpending);
-exports.spendingRouter.delete('/delete/:id', spending_controller_1.default.delete);
+exports.spendingRouter.delete('/delete/:id', spending_controller_1.default.deleteSpending);
+exports.spendingRouter.put('/edit', spending_controller_1.default.uploadSpending);
 //# sourceMappingURL=spending-router.js.map

@@ -8,6 +8,9 @@ class DetailController {
     creatDetail = async (req: Request, res: Response) => {
         return await DetailService.creatDetail(req, res)
     }
+    deleteDetail = async (req: Request, res: Response) => {
+        return await DetailService.deleteDetail(req, res)
+    }
 }
 
 export default new DetailController()

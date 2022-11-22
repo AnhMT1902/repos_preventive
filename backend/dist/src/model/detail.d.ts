@@ -28,7 +28,7 @@ import { ISpending } from "./spending";
 interface IDetail {
     money?: number;
     idWallet?: IWallet;
-    idSpending?: ISpending;
+    Spending?: ISpending;
 }
 declare const Detail: import("mongoose").Model<IDetail, {}, {}, {}, any>;
 export { Detail };

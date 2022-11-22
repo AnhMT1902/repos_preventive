@@ -9,7 +9,7 @@ const wallet_controller_1 = __importDefault(require("../controller/wallet-contro
 const auth_1 = require("../middleware/auth");
 exports.walletRouter = (0, express_1.Router)();
 exports.walletRouter.use(auth_1.auth);
-exports.walletRouter.get('/show', wallet_controller_1.default.showWallet);
+exports.walletRouter.get('/show/:id', wallet_controller_1.default.showWalletById);
 exports.walletRouter.post('/create/:id', wallet_controller_1.default.createWallet);
 exports.walletRouter.delete('/delete/:id', wallet_controller_1.default.deleteWallet);
 exports.walletRouter.put('/edit/:id', wallet_controller_1.default.uploadWallet);

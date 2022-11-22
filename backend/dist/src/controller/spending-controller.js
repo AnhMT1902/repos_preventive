@@ -14,8 +14,11 @@ class SpendingController {
         this.addSpending = async (req, res) => {
             await spending_service_2.default.addSpending(req, res);
         };
-        this.delete = async (req, res) => {
+        this.deleteSpending = async (req, res) => {
             await spending_service_2.default.deleteSpending(req, res);
+        };
+        this.uploadSpending = async (req, res) => {
+            await spending_service_2.default.editSpending(req, res);
         };
     }
 }

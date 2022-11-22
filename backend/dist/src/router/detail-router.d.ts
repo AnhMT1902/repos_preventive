@@ -1,1 +1,1 @@
-export declare const DetailRouter: import("express-serve-static-core").Router;
+export declare const detailRouter: import("express-serve-static-core").Router;

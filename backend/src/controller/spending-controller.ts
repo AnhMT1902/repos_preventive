@@ -8,11 +8,14 @@ export class SpendingController {
     }
 
     addSpending = async (req: Request, res: Response) => {
-        await spendingService.addSpending(req,res)
+        await spendingService.addSpending(req, res)
     }
 
-    delete = async (req:Request,res:Response)=>{
-        await spendingService.deleteSpending(req,res)
+    deleteSpending = async (req: Request, res: Response) => {
+        await spendingService.deleteSpending(req, res)
+    }
+    uploadSpending= async (req: Request, res: Response) => {
+        await spendingService.editSpending(req, res)
     }
 }
 

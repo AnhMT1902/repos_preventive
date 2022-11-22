@@ -4,7 +4,7 @@ import {model, Schema} from "mongoose";
 interface IDetail{
     money?:number,
     idWallet?:IWallet
-    idSpending?:ISpending
+    Spending?:ISpending
 }
 const DetailSchema = new Schema<IDetail>({
     money:Number,
@@ -12,7 +12,7 @@ const DetailSchema = new Schema<IDetail>({
         type:Schema.Types.ObjectId,
         ref:'Wallet'
     },
-    idSpending:{
+    Spending:{
         type:Schema.Types.ObjectId,
         ref:'Spending'
     }

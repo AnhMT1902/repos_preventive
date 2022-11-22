@@ -12,6 +12,9 @@ class DetailController {
         this.creatDetail = async (req, res) => {
             return await detail_service_1.default.creatDetail(req, res);
         };
+        this.deleteDetail = async (req, res) => {
+            return await detail_service_1.default.deleteDetail(req, res);
+        };
     }
 }
 exports.default = new DetailController();
