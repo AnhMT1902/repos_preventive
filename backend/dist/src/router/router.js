@@ -7,5 +7,4 @@ const wallet_router_1 = require("./wallet-router");
 exports.router = (0, express_1.Router)();
 exports.router.use('', user_router_1.userRouter);
 exports.router.use('', wallet_router_1.walletRouter);
-
 //# sourceMappingURL=router.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"detail-cotroller.js","sourceRoot":"","sources":["../../../src/controller/detail-cotroller.ts"],"names":[],"mappings":";;;;;AACA,+EAAsD;AAEtD,MAAM,gBAAgB;IAAtB;QACI,eAAU,GAAG,KAAK,EAAE,GAAY,EAAE,GAAa,EAAE,EAAE;YAC/C,OAAO,MAAM,wBAAa,CAAC,MAAM,CAAC,GAAG,EAAE,GAAG,CAAC,CAAA;QAC/C,CAAC,CAAA;IAEL,CAAC;CAAA;AAED,kBAAe,IAAI,gBAAgB,EAAE,CAAA"}
